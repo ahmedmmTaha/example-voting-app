@@ -37,7 +37,7 @@ def hello():
         redis.rpush('votes', data)
 
     resp = make_response(render_template(
-        'templates/index.html',
+        'index.html',
         option_a=option_a,
         option_b=option_b,
         hostname=hostname,
