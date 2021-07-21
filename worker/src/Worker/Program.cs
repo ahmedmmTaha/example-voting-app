@@ -105,7 +105,7 @@ namespace Worker
         private static ConnectionMultiplexer OpenRedisConnection(string hostname)
         {
             // Use IP address to workaround https://github.com/StackExchange/StackExchange.Redis/issues/410
-            var ipAddress = GetIp(hostname);
+            var ipAddress = GetIp(hostname) + ",password=redis_password";
             Console.WriteLine($"Found redis at {ipAddress}");
 
             while (true)
